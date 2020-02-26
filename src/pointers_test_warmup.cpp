@@ -11,7 +11,7 @@
 
 using namespace std;
 
-void pointers_warmup()
+int main()
 {
 	int x = 3;
 	int y = 10;
@@ -45,35 +45,6 @@ void pointers_warmup()
 	cout << "*(B + 2)" << *(B + 2) << endl;
 	cout << "(B + 2)[1]" << (B + 2)[1] << endl;
 	cout << "(B + 1)" << (B + 1) << endl;
-}
-
-void pointers_new() {
-
-	//uninitialized
-	int *myint = new int;
-
-	//initialized
-	int *myint1 = new int(10);
-
-	//uninitialized
-	int *myint2 = new int[20];
-
-	//set it to zero
-	memset(myint2, 0, 20 *sizeof(int));
-
-	for (int i = 0; i < 20; i++)
-		*(myint2 + i) = i;
-
-	//clean up
-	delete myint;
-	delete myint1;
-	delete []myint2;
-}
-
-int main()
-{
-	pointers_warmup();
-	pointers_new();
 }
 
 
