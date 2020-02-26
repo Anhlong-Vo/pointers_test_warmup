@@ -34,8 +34,8 @@ int main()
 	cout << "*b points to " << *b << endl;
 	cout << "z+1 points to " << *(z + 1) << endl;
 
-	int* a = new int(37);
-	z = a;
+	int l = 3;
+	z = &l;
 	cout << "z points to " << *z << endl;
 	cout << "z+1 points to (why does it look random?)" << *(z+1) << endl;
 
